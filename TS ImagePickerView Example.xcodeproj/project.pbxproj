@@ -11,6 +11,7 @@
 		E95A4F9E28001C76006716D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A4F9D28001C76006716D2 /* ContentView.swift */; };
 		E95A4FA028001C77006716D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4F9F28001C77006716D2 /* Assets.xcassets */; };
 		E95A4FA328001C77006716D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4FA228001C77006716D2 /* Preview Assets.xcassets */; };
+		E95A4FAA28001C85006716D2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A4FA928001C85006716D2 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E95A4F9D28001C76006716D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E95A4F9F28001C77006716D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95A4FA228001C77006716D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E95A4FA928001C85006716D2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				E95A4F9B28001C76006716D2 /* TS_ImagePickerView_ExampleApp.swift */,
 				E95A4F9D28001C76006716D2 /* ContentView.swift */,
+				E95A4FA928001C85006716D2 /* ImagePickerView.swift */,
 				E95A4F9F28001C77006716D2 /* Assets.xcassets */,
 				E95A4FA128001C77006716D2 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E95A4F9E28001C76006716D2 /* ContentView.swift in Sources */,
+				E95A4FAA28001C85006716D2 /* ImagePickerView.swift in Sources */,
 				E95A4F9C28001C76006716D2 /* TS_ImagePickerView_ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showImagePickerView = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Select photo") {
+            showImagePickerView = true
+        }
+        .sheet(isPresented: $showImagePickerView) {
+            ImagePickerView()
+        }
     }
 }
 
