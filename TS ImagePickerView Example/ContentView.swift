@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var photoData: Data?
+    
     @State private var showImagePickerView = false
     
     var body: some View {
-        Button("Select photo") {
-            showImagePickerView = true
+        VStack {
+            if let photoData = self.photoData, let uiImage = UIImage(data: photoData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFit()
+            }
+            Spacer()
+            Button("Select photo") {
+                showImagePickerView = true
+            }
         }
         .sheet(isPresented: $showImagePickerView) {
-            ImagePickerView()
+            ImagePickerView(showsImagePickerView: $showImagePickerView) { imageData in
+                photoData = imageData
+            }
         }
     }
 }
