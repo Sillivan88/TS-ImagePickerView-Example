@@ -8,25 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var photoData: Data?
+    @FetchRequest(
+        entity: SavedImage.entity(),
+        sortDescriptors: [NSSortDescriptor(key: "creationDate", ascending: true)]
+    )
+    private var savedImages: FetchedResults<SavedImage>
     
     @State private var showImagePickerView = false
     
     var body: some View {
-        VStack {
-            if let photoData = self.photoData, let uiImage = UIImage(data: photoData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFit()
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 120, maximum: 200))]) {
+                    ForEach(savedImages) { savedImage in
+                        if let savedImageData = savedImage.data, let uiImage = UIImage(data: savedImageData) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                    }
+                }
+                .padding()
             }
-            Spacer()
-            Button("Select photo") {
-                showImagePickerView = true
+            .navigationTitle("Images")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Button("Select photo") {
+                        showImagePickerView = true
+                    }
+                }
             }
         }
         .sheet(isPresented: $showImagePickerView) {
             ImagePickerView(showsImagePickerView: $showImagePickerView) { imageData in
-                photoData = imageData
+                if let data = imageData {
+                    CoreDataManager.shared.createSavedImage(with: data)
+                }
             }
         }
     }

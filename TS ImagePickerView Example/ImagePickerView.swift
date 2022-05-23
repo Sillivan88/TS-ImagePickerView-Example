@@ -55,7 +55,6 @@ struct ImagePickerView: UIViewControllerRepresentable {
     }
 }
 
-
 struct ImagePickerView_Previews: PreviewProvider {
     static var previews: some View {
         ImagePickerView(showsImagePickerView: .constant(true)) { _ in }

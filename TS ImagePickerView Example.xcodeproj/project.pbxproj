@@ -12,6 +12,8 @@
 		E95A4FA028001C77006716D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4F9F28001C77006716D2 /* Assets.xcassets */; };
 		E95A4FA328001C77006716D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4FA228001C77006716D2 /* Preview Assets.xcassets */; };
 		E95A4FAA28001C85006716D2 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A4FA928001C85006716D2 /* ImagePickerView.swift */; };
+		E9D35D80282E286D000F560F /* ImagePickerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9D35D7E282E286D000F560F /* ImagePickerDataModel.xcdatamodeld */; };
+		E9D35D82282E28EA000F560F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D35D81282E28EA000F560F /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		E95A4F9F28001C77006716D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95A4FA228001C77006716D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E95A4FA928001C85006716D2 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		E9D35D7F282E286D000F560F /* ImagePickerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImagePickerDataModel.xcdatamodel; sourceTree = "<group>"; };
+		E9D35D81282E28EA000F560F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 				E95A4F9B28001C76006716D2 /* TS_ImagePickerView_ExampleApp.swift */,
 				E95A4F9D28001C76006716D2 /* ContentView.swift */,
 				E95A4FA928001C85006716D2 /* ImagePickerView.swift */,
+				E9D35D81282E28EA000F560F /* CoreDataManager.swift */,
 				E95A4F9F28001C77006716D2 /* Assets.xcassets */,
+				E9D35D7E282E286D000F560F /* ImagePickerDataModel.xcdatamodeld */,
 				E95A4FA128001C77006716D2 /* Preview Content */,
 			);
 			path = "TS ImagePickerView Example";
@@ -143,6 +149,8 @@
 				E95A4F9E28001C76006716D2 /* ContentView.swift in Sources */,
 				E95A4FAA28001C85006716D2 /* ImagePickerView.swift in Sources */,
 				E95A4F9C28001C76006716D2 /* TS_ImagePickerView_ExampleApp.swift in Sources */,
+				E9D35D82282E28EA000F560F /* CoreDataManager.swift in Sources */,
+				E9D35D80282E286D000F560F /* ImagePickerDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +351,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9D35D7E282E286D000F560F /* ImagePickerDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9D35D7F282E286D000F560F /* ImagePickerDataModel.xcdatamodel */,
+			);
+			currentVersion = E9D35D7F282E286D000F560F /* ImagePickerDataModel.xcdatamodel */;
+			path = ImagePickerDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E95A4F9028001C76006716D2 /* Project object */;
 }
