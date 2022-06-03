@@ -31,9 +31,15 @@ struct CoreDataManager {
 extension CoreDataManager {
     @discardableResult func createSavedImage(with data: Data) -> SavedImage {
         let savedImage = SavedImage(context: viewContext)
-        savedImage.data = data
+        savedImage.uuid = UUID()
         savedImage.creationDate = Date()
+        try? saveImageInFileSystem(imageData: data, fileName: savedImage.uuid!.uuidString)
         saveContext()
         return savedImage
+    }
+    
+    func saveImageInFileSystem(imageData: Data, fileName: String) throws {
+        let fileURL = ImageFileHandler.fileURL(for: fileName)
+        try imageData.write(to: fileURL)
     }
 }
